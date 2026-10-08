@@ -1,14 +1,19 @@
 {
   "name": "muwaqe-estates",
-  "version": "1.0.0",
-  "description": "Muwaqe Estates — Digital Real Estate Governance & Secure Payment Verification Platform (AR/EN)",
+  "version": "1.1.0",
+  "description": "Muwaqe Estates — Digital Real Estate Governance & Secure Payment Verification Platform (AR/EN) with PostgreSQL + PWA mobile app",
   "main": "server/index.js",
   "type": "commonjs",
   "scripts": {
-    "start": "node server/index.js"
+    "start": "node server/index.js",
+    "start:pg": "EMBEDDED_PG=1 node server/index.js"
   },
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "embedded-postgres": "^18.4.0-beta.17",
+    "pg": "^8.13.1"
   },
   "license": "MIT"
 }

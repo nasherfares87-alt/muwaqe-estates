@@ -49,7 +49,9 @@ const I18N = {
     fInquiry: 'رقم الاستفسار الموحد', fUnit: 'بيانات الوحدة', fStatus: 'الحالة', fEscrow: 'الحساب العقاري',
     fBooked: 'محجوزة', fActive: 'نشطة', fLocked: 'مثبتة 🔒', fUnlocked: 'غير مثبتة',
     verifiedOk: 'عرض موثق ✓', notFound: 'لم يتم العثور على العرض', serverErr: 'خطأ في الخدمة، حاول مجدداً',
-    tracked: 'نتائج التتبع', noData: 'لا توجد بيانات'
+    tracked: 'نتائج التتبع', noData: 'لا توجد بيانات',
+    back: 'رجوع', tabHome: 'الرئيسية', tabVerify: 'تحقق', tabTrack: 'تتبع', tabListings: 'العروض',
+    mVerify: 'التحقق من عرض', mListings: 'العروض العقارية', mBook: 'حجز وحدة', mInvoice: 'إصدار فاتورة', mPay: 'دفع فاتورة', mTrack: 'تتبع عملية', mFullSite: 'النسخة الكاملة (ويب)'
   },
   en: {
     brand: 'Muwaqe Estates', brandSub: 'موثوق العقاري',
@@ -100,7 +102,9 @@ const I18N = {
     fInquiry: 'Unified inquiry number', fUnit: 'Unit data', fStatus: 'Status', fEscrow: 'Escrow account',
     fBooked: 'Booked', fActive: 'Active', fLocked: 'Locked 🔒', fUnlocked: 'Not locked',
     verifiedOk: 'Verified listing ✓', notFound: 'Listing not found', serverErr: 'Server error, try again',
-    tracked: 'Tracking results', noData: 'No data'
+    tracked: 'Tracking results', noData: 'No data',
+    back: 'Back', tabHome: 'Home', tabVerify: 'Verify', tabTrack: 'Track', tabListings: 'Listings',
+    mVerify: 'Verify a listing', mListings: 'Listings', mBook: 'Book a unit', mInvoice: 'Issue invoice', mPay: 'Pay invoice', mTrack: 'Track operation', mFullSite: 'Full website'
   }
 };
 

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#0d5c4b">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="موثوق">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/icons/icon-192.png">
+<title>موثوق العقاري | Muwaqe Estates</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="mobile-app">
+
+<header class="app-bar">
+  <div class="app-bar-inner">
+    <a class="brand" href="/">
+      <span class="logo">◉</span>
+      <span class="brand-name"><span data-i18n="brand">موثوق العقاري</span> <small data-i18n="brandSub">Muwaqe Estates</small></span>
+    </a>
+    <button id="langBtn" class="btn ghost small">EN</button>
+  </div>
+</header>
+
+<main class="app-main">
+  <!-- Home -->
+  <section class="app-view" id="view-home">
+    <div class="stats-grid" id="statsGrid"></div>
+    <div class="menu-grid">
+      <button class="menu-tile" data-go="verify"><span class="mi">🔎</span><span data-i18n="mVerify">التحقق من عرض</span></button>
+      <button class="menu-tile" data-go="listings"><span class="mi">🏘</span><span data-i18n="mListings">العروض العقارية</span></button>
+      <button class="menu-tile" data-go="book"><span class="mi">📅</span><span data-i18n="mBook">حجز وحدة</span></button>
+      <button class="menu-tile" data-go="invoice"><span class="mi">🧾</span><span data-i18n="mInvoice">إصدار فاتورة</span></button>
+      <button class="menu-tile" data-go="pay"><span class="mi">💳</span><span data-i18n="mPay">دفع فاتورة</span></button>
+      <button class="menu-tile" data-go="track"><span class="mi">📊</span><span data-i18n="mTrack">تتبع عملية</span></button>
+    </div>
+    <div class="hero-actions" style="justify-content:center">
+      <a class="btn ghost" href="/" id="fullSiteLink" data-i18n="mFullSite">النسخة الكاملة (ويب)</a>
+    </div>
+  </section>
+
+  <!-- Verify -->
+  <section class="app-view hidden" id="view-verify">
+    <h2 class="view-title" data-i18n="verifyTitle">التحقق من عرض عقاري</h2>
+    <form id="mVerifyForm" class="card form-v">
+      <input id="mVerifyInput" placeholder="INQ-2025-000001" required>
+      <button class="btn primary" type="submit" data-i18n="verifyBtn">تحقق</button>
+    </form>
+    <div id="mVerifyResult" class="result"></div>
+    <button class="btn ghost back-btn" data-go="home">← <span data-i18n="back">رجوع</span></button>
+  </section>
+
+  <!-- Listings -->
+  <section class="app-view hidden" id="view-listings">
+    <h2 class="view-title" data-i18n="mListings">العروض العقارية</h2>
+    <div id="mListingsResult" class="listings-list"></div>
+    <button class="btn ghost back-btn" data-go="home">← <span data-i18n="back">رجوع</span></button>
+  </section>
+
+  <!-- Book -->
+  <section class="app-view hidden" id="view-book">
+    <h2 class="view-title" data-i18n="actBook">حجز وحدة</h2>
+    <form id="mBookForm" class="card form-v">
+      <input name="inquiryNumber" placeholder="INQ-2025-000002" required>
+      <input name="buyerName" placeholder="الاسم الكامل / Full name" required>
+      <button class="btn primary" type="submit" data-i18n="actBookBtn">تأكيد الحجز</button>
+    </form>
+    <div id="mBookResult" class="result"></div>
+    <button class="btn ghost back-btn" data-go="home">← <span data-i18n="back">رجوع</span></button>
+  </section>
+
+  <!-- Invoice -->
+  <section class="app-view hidden" id="view-invoice">
+    <h2 class="view-title" data-i18n="actInvoice">إصدار فاتورة</h2>
+    <form id="mInvoiceForm" class="card form-v">
+      <input name="inquiryNumber" placeholder="INQ-2025-000002" required>
+      <select name="kind">
+        <option value="deposit" data-i18n="optDeposit">عربون</option>
+        <option value="payment" data-i18n="optPayment">دفعة</option>
+        <option value="rent" data-i18n="optRent">إيجار</option>
+        <option value="fee" data-i18n="optFee">رسوم</option>
+      </select>
+      <input name="amount" type="number" placeholder="المبلغ / Amount (SAR)" required>
+      <input name="description" placeholder="الوصف / Description">
+      <button class="btn primary" type="submit" data-i18n="actInvoiceBtn">إصدار الفاتورة</button>
+    </form>
+    <div id="mInvoiceResult" class="result"></div>
+    <button class="btn ghost back-btn" data-go="home">← <span data-i18n="back">رجوع</span></button>
+  </section>
+
+  <!-- Pay -->
+  <section class="app-view hidden" id="view-pay">
+    <h2 class="view-title" data-i18n="actPay">دفع فاتورة</h2>
+    <form id="mPayForm" class="card form-v">
+      <input name="invoiceNumber" placeholder="INV-XXXX" required>
+      <select name="method">
+        <option value="bank-transfer" data-i18n="optBank">تحويل بنكي</option>
+        <option value="card" data-i18n="optCard">بطاقة</option>
+      </select>
+      <button class="btn primary" type="submit" data-i18n="actPayBtn">إتمام الدفع</button>
+    </form>
+    <div id="mPayResult" class="result"></div>
+    <button class="btn ghost back-btn" data-go="home">← <span data-i18n="back">رجوع</span></button>
+  </section>
+
+  <!-- Track -->
+  <section class="app-view hidden" id="view-track">
+    <h2 class="view-title" data-i18n="actTrack">تتبع عملية</h2>
+    <form id="mTrackForm" class="card form-v">
+      <input name="number" placeholder="INQ-... / SA-ESC-... / INV-..." required>
+      <button class="btn primary" type="submit" data-i18n="actTrackBtn">تتبع</button>
+    </form>
+    <div id="mTrackResult" class="result"></div>
+    <button class="btn ghost back-btn" data-go="home">← <span data-i18n="back">رجوع</span></button>
+  </section>
+</main>
+
+<nav class="tab-bar">
+  <button class="tab active" data-go="home"><span>🏠</span><span data-i18n="tabHome">الرئيسية</span></button>
+  <button class="tab" data-go="verify"><span>🔎</span><span data-i18n="tabVerify">تحقق</span></button>
+  <button class="tab" data-go="track"><span>📊</span><span data-i18n="tabTrack">تتبع</span></button>
+  <button class="tab" data-go="listings"><span>🏘</span><span data-i18n="tabListings">العروض</span></button>
+</nav>
+
+<script src="/js/i18n.js"></script>
+<script src="/js/mobile.js"></script>
+</body>
+</html>
