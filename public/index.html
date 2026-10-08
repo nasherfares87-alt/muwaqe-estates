@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>موثوق العقاري | Muwaqe Estates</title>
+<meta name="description" content="منصة حوكمة عقارية رقمية للتحقق والدفع الآمن — Digital real-estate governance: verification & secure payments">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="/">
+      <span class="logo">◉</span>
+      <span class="brand-name"><span data-i18n="brand">موثوق العقاري</span> <small data-i18n="brandSub">Muwaqe Estates</small></span>
+    </a>
+    <nav>
+      <a href="#verify" data-i18n="navVerify">التحقق</a>
+      <a href="#flow" data-i18n="navFlow">المسار</a>
+      <a href="#components" data-i18n="navComponents">المكونات</a>
+      <a href="#dashboard" data-i18n="navDashboard">لوحة المعلومات</a>
+      <a href="#impact" data-i18n="navImpact">الأثر</a>
+    </nav>
+    <button id="langBtn" class="btn ghost">EN / عربي</button>
+  </div>
+</header>
+
+<section class="hero" id="hero">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <span class="badge" data-i18n="heroBadge">منصة حوكمة عقارية رقمية</span>
+      <h1 data-i18n="heroTitle">التحقق والدفع الآمن للتعاملات العقارية</h1>
+      <p data-i18n="heroDesc">موثوق العقاري طبقة رقمية موحدة تبدأ من التحقق من العرض العقاري وتنتهي بتوثيق العملية المالية والتحصيل — رقم استفسار موحد، حساب عقاري مستقل، وحساب افتراضي لكل عملية.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#verify" data-i18n="heroCta1">تحقق من عرض الآن</a>
+        <a class="btn ghost" href="#flow" data-i18n="heroCta2">استعرض المسار الرقمي</a>
+      </div>
+      <div class="hero-stats" id="heroStats"></div>
+    </div>
+    <div class="hero-art">
+      <div class="card art-card">
+        <div class="art-number">INQ-2025-000001</div>
+        <div class="art-row"><span data-i18n="artStatus">التحقق</span><span class="ok">✓</span></div>
+        <div class="art-row"><span data-i18n="artEscrow">حساب عقاري مستقل</span><span class="ok">SA-ESC-•••</span></div>
+        <div class="art-row"><span data-i18n="artLock">تثبيت بيانات الوحدة</span><span class="ok">🔒</span></div>
+        <div class="art-row"><span data-i18n="artPay">الدفع عبر حساب افتراضي</span><span class="ok">✓</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="verify">
+  <div class="container">
+    <h2 class="section-title" data-i18n="verifyTitle">التحقق من عرض عقاري</h2>
+    <p class="section-sub" data-i18n="verifySub">أدخل رقم الاستفسار العقاري الموحد للتحقق من العرض وبيانات الوحدة قبل أي تعامل.</p>
+    <div class="card verify-card">
+      <form id="verifyForm" class="verify-form">
+        <input id="verifyInput" type="text" placeholder="INQ-2025-000001" required>
+        <button class="btn primary" type="submit" data-i18n="verifyBtn">تحقق</button>
+      </form>
+      <div id="verifyResult" class="verify-result"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="flow">
+  <div class="container">
+    <h2 class="section-title" data-i18n="flowTitle">المسار الرقمي الموحد</h2>
+    <p class="section-sub" data-i18n="flowSub">من التحقق إلى التتبع والتسوية في مسار واحد آمن وموثق.</p>
+    <div class="flow" id="flowSteps">
+      <div class="flow-step"><div class="flow-icon">🔎</div><h3 data-i18n="flow1">التحقق</h3><p data-i18n="flow1d">رقم استفسار موحد مرتبط بالبيانات العقارية والعنوان الوطني.</p></div>
+      <div class="flow-step"><div class="flow-icon">💬</div><h3 data-i18n="flow2">الاستفسار</h3><p data-i18n="flow2d">التحقق من صحة العرض وبياناته قبل التعامل.</p></div>
+      <div class="flow-step"><div class="flow-icon">📅</div><h3 data-i18n="flow3">الحجز</h3><p data-i18n="flow3d">تأكيد الحجز وربطه بالوحدة والمستفيد.</p></div>
+      <div class="flow-step"><div class="flow-icon">🔒</div><h3 data-i18n="flow4">تثبيت البيانات</h3><p data-i18n="flow4d">لا تغيير في البيانات الجوهرية إلا بإجراء رسمي موثق.</p></div>
+      <div class="flow-step"><div class="flow-icon">🧾</div><h3 data-i18n="flow5">الفوترة</h3><p data-i18n="flow5d">فواتير إلكترونية مرتبطة بالحساب العقاري.</p></div>
+      <div class="flow-step"><div class="flow-icon">💳</div><h3 data-i18n="flow6">الدفع</h3><p data-i18n="flow6d">حساب افتراضي لكل عملية: عربون، دفعات، إيجار، رسوم.</p></div>
+      <div class="flow-step"><div class="flow-icon">📊</div><h3 data-i18n="flow7">التتبع والتسوية</h3><p data-i18n="flow7d">سجل رقمي قابل للتتبع للعمليات المالية والعقارية.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="components">
+  <div class="container">
+    <h2 class="section-title" data-i18n="compTitle">المكونات الرئيسية</h2>
+    <div class="grid">
+      <div class="card feature"><h3>🆔 <span data-i18n="c1">رقم استفسار عقاري موحد</span></h3><p data-i18n="c1d">رقم فريد لكل عرض أو وحدة، مرتبط بالبيانات العقارية والعنوان الوطني.</p></div>
+      <div class="card feature"><h3>🏦 <span data-i18n="c2">حساب عقاري مستقل</span></h3><p data-i18n="c2d">حساب مخصص للعملية، منفصل عن الحسابات الشخصية، يستقبل المدفوعات وفق الضوابط.</p></div>
+      <div class="card feature"><h3>💠 <span data-i18n="c3">حساب افتراضي لكل عملية</span></h3><p data-i18n="c3d">للعربون والدفعات والإيجار والرسوم، لربط العملية بالعقار والوحدة والمستفيد.</p></div>
+      <div class="card feature"><h3>🛡 <span data-i18n="c4">حماية بيانات الوحدة بعد الحجز</span></h3><p data-i18n="c4d">تثبيت البيانات الجوهرية، ولا تعديل إلا عبر إجراء رسمي موثق.</p></div>
+      <div class="card feature"><h3>🏗 <span data-i18n="c5">حماية البيع على الخارطة</span></h3><p data-i18n="c5d">ربط بيانات الوحدة والمشروع بالعملية المالية لحماية المشتري.</p></div>
+      <div class="card feature"><h3>🏘 <span data-i18n="c6">فوترة اتحادات الملاك</span></h3><p data-i18n="c6d">فواتير دورية لرسوم الصيانة والتشغيل مع متابعة التحصيل والتسويات.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="dashboard">
+  <div class="container">
+    <h2 class="section-title" data-i18n="dashTitle">لوحة المعلومات الحية</h2>
+    <p class="section-sub" data-i18n="dashSub">بيانات مباشرة من واجهة API — جرّب إنشاء عرض أو حجز أو فاتورة أو دفع.</p>
+    <div class="stats-grid" id="statsGrid"></div>
+
+    <div class="dash-actions">
+      <div class="card action-card">
+        <h3 data-i18n="actCreate">إنشاء عرض عقاري جديد</h3>
+        <form id="listingForm" class="form-grid">
+          <input name="unitNumber" placeholder="A-1201" required>
+          <input name="city" placeholder="الرياض / Riyadh" required>
+          <input name="district" placeholder="الحي / District">
+          <input name="nationalAddress" placeholder="العنوان الوطني / National Address">
+          <input name="areaSqm" type="number" placeholder="المساحة م² / Area">
+          <input name="rooms" type="number" placeholder="الغرف / Rooms">
+          <input name="bathrooms" type="number" placeholder="دورات المياه / Baths">
+          <input name="floor" type="number" placeholder="الطابق / Floor">
+          <input name="price" type="number" placeholder="السعر / Price (SAR)" required>
+          <input name="projectName" placeholder="المشروع / Project">
+          <button class="btn primary" type="submit" data-i18n="actCreateBtn">إنشاء + رقم موحد</button>
+        </form>
+        <div id="listingResult" class="result"></div>
+      </div>
+
+      <div class="card action-card">
+        <h3 data-i18n="actBook">حجز وحدة</h3>
+        <form id="bookForm" class="form-grid">
+          <input name="inquiryNumber" placeholder="INQ-2025-000002" required>
+          <input name="buyerName" placeholder="اسم المستفيد / Buyer name" required>
+          <button class="btn primary" type="submit" data-i18n="actBookBtn">تأكيد الحجز</button>
+        </form>
+        <div id="bookResult" class="result"></div>
+
+        <h3 style="margin-top:24px" data-i18n="actInvoice">إصدار فاتورة</h3>
+        <form id="invoiceForm" class="form-grid">
+          <input name="inquiryNumber" placeholder="INQ-2025-000002" required>
+          <select name="kind">
+            <option value="deposit" data-i18n="optDeposit">عربون</option>
+            <option value="payment" data-i18n="optPayment">دفعة</option>
+            <option value="rent" data-i18n="optRent">إيجار</option>
+            <option value="fee" data-i18n="optFee">رسوم</option>
+          </select>
+          <input name="amount" type="number" placeholder="المبلغ / Amount" required>
+          <input name="description" placeholder="الوصف / Description">
+          <button class="btn primary" type="submit" data-i18n="actInvoiceBtn">إصدار الفاتورة</button>
+        </form>
+        <div id="invoiceResult" class="result"></div>
+
+        <h3 style="margin-top:24px" data-i18n="actPay">دفع فاتورة</h3>
+        <form id="payForm" class="form-grid">
+          <input name="invoiceNumber" placeholder="INV-XXXX" required>
+          <select name="method">
+            <option value="bank-transfer" data-i18n="optBank">تحويل بنكي</option>
+            <option value="card" data-i18n="optCard">بطاقة</option>
+          </select>
+          <button class="btn primary" type="submit" data-i18n="actPayBtn">إتمام الدفع</button>
+        </form>
+        <div id="payResult" class="result"></div>
+      </div>
+
+      <div class="card action-card">
+        <h3 data-i18n="actUnion">فوترة اتحادات الملاك</h3>
+        <form id="unionForm" class="form-grid">
+          <input name="unitNumber" placeholder="A-1201" required>
+          <input name="amount" type="number" placeholder="رسوم الصيانة / Fees" required>
+          <select name="cycle">
+            <option value="monthly" data-i18n="optMonthly">شهري</option>
+            <option value="quarterly" data-i18n="optQuarterly">ربع سنوي</option>
+          </select>
+          <button class="btn primary" type="submit" data-i18n="actUnionBtn">إصدار فاتورة دورية</button>
+        </form>
+        <div id="unionResult" class="result"></div>
+
+        <h3 style="margin-top:24px" data-i18n="actTrack">تتبع عملية</h3>
+        <form id="trackForm" class="form-grid">
+          <input name="number" placeholder="INQ-... أو SA-ESC-..." required>
+          <button class="btn primary" type="submit" data-i18n="actTrackBtn">تتبع</button>
+        </form>
+        <div id="trackResult" class="result"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="impact">
+  <div class="container">
+    <h2 class="section-title" data-i18n="impactTitle">الأثر المتوقع</h2>
+    <div class="impact-list">
+      <div class="impact-item" data-i18n="i1">الحد من الإعلانات العقارية الوهمية والاحتيال المرتبط بها.</div>
+      <div class="impact-item" data-i18n="i2">رفع مستوى التحقق قبل التحويل والدفع.</div>
+      <div class="impact-item" data-i18n="i3">حماية بيانات الوحدات العقارية بعد الحجز.</div>
+      <div class="impact-item" data-i18n="i4">تعزيز الشفافية في المدفوعات والعمولات والمستحقات.</div>
+      <div class="impact-item" data-i18n="i5">تحسين كفاءة تحصيل رسوم اتحادات الملاك.</div>
+      <div class="impact-item" data-i18n="i6">سجل رقمي قابل للتتبع للعمليات العقارية والمالية.</div>
+      <div class="impact-item" data-i18n="i7">دعم الحوكمة والتحول الرقمي بما يتوافق مع رؤية المملكة 2030.</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p data-i18n="footer">موثوق العقاري — طبقة حوكمة رقمية تتكامل مع الأنظمة والمنصات القائمة، لبناء سوق عقاري أكثر أماناً وشفافية وكفاءة.</p>
+    <p class="api-link"><a href="/api/stats" target="_blank">API</a> · <a href="/api/audit" target="_blank">Audit Log</a></p>
+  </div>
+</footer>
+
+<script src="/js/i18n.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>
